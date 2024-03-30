@@ -23,13 +23,7 @@
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",
-    "**/Dockerfile",
-    "**/src/ui-tests/fixtures/**/*",
-    "**/storybook-static/**/*",
-    "**/build/**/*",
-    "**/dist/**/*",
-    "**/artifacts/**/*",
-    "extension/src/assets/**/*.json"
+    "**/Dockerfile"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.88.3.wasm",
