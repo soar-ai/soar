@@ -328,23 +328,6 @@ module.exports = {
       ignoreUrls: true,
     }],
     'max-params': ['error', 3],
-    'new-cap': [
-      'error',
-      {
-        capIsNew: true,
-        capIsNewExceptions: [
-          'express.Router',
-          'Immutable.Map',
-          'Immutable.Set',
-          'Immutable.List',
-          'RightRailView',
-          'URLWithSearchParams',
-        ],
-        newIsCap: true,
-        newIsCapExceptions: [],
-        properties: true,
-      },
-    ],
     'no-console': 'error',
     'no-continue': 'off',
     'no-empty-function': 'off',
