@@ -1,0 +1,19 @@
+name: Build & Migrate Prod DB
+on:
+  push:
+    branches:
+      - main
+defaults:
+  run:
+    working-directory: server
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Apply all pending migrations to the database
+        working-directory: server
+        run: npx prisma migrate deploy
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
